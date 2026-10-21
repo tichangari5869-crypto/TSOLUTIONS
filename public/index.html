@@ -112,6 +112,17 @@
     .how li { margin: 6px 0; }
     .footer { color: var(--muted); text-align: center; }
     .footer a { color: inherit; font-weight: 700; }
+    .footer button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--card); color: var(--muted); }
+    .admin-editor { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
+    .admin-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .admin-grid label { margin: 6px 0 0; }
+    .admin-grid input, .admin-grid select, .admin-grid textarea { width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--card); color: var(--ink); }
+    .admin-grid input[type="checkbox"] { width: auto; }
+    .admin-grid .wide { grid-column: 1 / -1; }
+    .admin-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .admin-actions button { min-height: 42px; padding: 9px 14px; border: 0; border-radius: 9px; background: var(--navy); color: #fff; font-weight: 700; }
+    .admin-actions .save { background: var(--green); }
+    .admin-actions .delete { background: #b42318; }
     .slipbar {
       position: fixed;
       right: 12px;
@@ -183,9 +194,38 @@
   </main>
   <footer class="footer wrap">
     <p>Questions? <a href="https://wa.me/254117784005" target="_blank" rel="noopener">Chat with T Solutions on WhatsApp</a>.</p>
+    <button id="admin-open" type="button">Admin login</button>
   </footer>
   <button id="slipbar" class="slipbar" type="button" hidden></button>
   <div id="sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="slip-title"></div>
+  <div id="admin-sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="admin-title" aria-hidden="true">
+    <div class="panel">
+      <button id="admin-close" class="close" type="button" aria-label="Close admin login">×</button>
+      <h2 id="admin-title">T Solutions admin</h2>
+      <p id="admin-status" class="error" role="status">Sign in with the authorized Google account to manage services.</p>
+      <button id="admin-sign-in" class="send" type="button">Sign in with Google</button>
+      <section id="admin-editor" class="admin-editor" hidden>
+        <div class="admin-grid">
+          <label>Category<select id="admin-category"></select></label>
+          <label>Service<select id="admin-service"></select></label>
+          <label class="wide">Service name<input id="admin-name" type="text"></label>
+          <label>Price, low (KSh)<input id="admin-low" type="number" min="0"></label>
+          <label>Price, high (KSh)<input id="admin-high" type="number" min="0"></label>
+          <label>Turnaround time<input id="admin-time" type="text"></label>
+          <label>Delivery details<input id="admin-delivery" type="text"></label>
+          <label class="wide">What to bring (one item per line)<textarea id="admin-bring" rows="4"></textarea></label>
+          <label class="wide">Details to request from customer (one item per line)<textarea id="admin-ask" rows="3"></textarea></label>
+          <label class="wide"><input id="admin-per-page" type="checkbox"> Price is per page</label>
+        </div>
+        <div class="admin-actions">
+          <button id="admin-save" class="save" type="button">Save service</button>
+          <button id="admin-add" type="button">Add service</button>
+          <button id="admin-delete" class="delete" type="button">Delete service</button>
+          <button id="admin-sign-out" type="button">Sign out</button>
+        </div>
+      </section>
+    </div>
+  </div>
   <script>
     "use strict";
 
@@ -206,6 +246,11 @@
     const sheet = document.querySelector("#sheet");
     const selected = new Map();
     let categories = [];
+    window.addEventListener("service-catalog-loaded", (event) => {
+      if (!Array.isArray(event.detail)) return;
+      categories = event.detail;
+      renderServices();
+    });
 
     function itemFor(key) {
       const [categoryIndex, itemIndex] = key.split(":").map(Number);
@@ -354,5 +399,6 @@
         servicesElement.innerHTML = `<p class="empty">We couldn't load the service list. Please <a href="https://wa.me/${WHATSAPP_NUMBER}">contact us on WhatsApp</a>.</p>`;
       });
   </script>
+  <script type="module" src="firebase-admin.js"></script>
 </body>
 </html>
