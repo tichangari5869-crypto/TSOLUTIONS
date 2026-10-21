@@ -3,9 +3,9 @@ export const firebaseConfig = {
   authDomain: "",
   projectId: "",
   appId: "",
-  adminEmail: ""
+  adminUid: ""
 };
 
 export const isFirebaseConfigured = Object.entries(firebaseConfig)
-  .filter(([key]) => key !== "adminEmail")
-  .every(([, value]) => Boolean(value)) && Boolean(firebaseConfig.adminEmail);
+  .filter(([key]) => key !== "adminUid")
+  .every(([, value]) => Boolean(value)) && Boolean(firebaseConfig.adminUid);

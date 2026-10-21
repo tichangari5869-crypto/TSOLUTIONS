@@ -14,15 +14,16 @@ In the repository's **Settings → Pages**, set **Build and deployment → Sourc
 
 ## Secure Admin login
 
-The Admin login at the bottom of the page uses Google sign-in and Cloud Firestore. Before it can save changes:
+The Admin login at the bottom of the page uses Firebase email/password sign-in and Cloud Firestore. It can edit the site text and contact details, manage search shortcuts, add/edit/remove categories and services, and publish the changes. Before it can save changes:
 
-1. Create a Firebase project and register a web app. Copy its `apiKey`, `authDomain`, `projectId`, and `appId` into `public/firebase-config.js`. Set `adminEmail` to the verified Google account that should administer the site.
-2. In Firebase Console, enable **Authentication → Google** and create the default **Cloud Firestore** database.
-3. Replace `REPLACE_WITH_ADMIN_EMAIL` in `firestore.rules` with the same admin email, then publish these rules in **Firestore Database → Rules**.
-4. Add `tichangari5869-crypto.github.io` to **Authentication → Settings → Authorized domains** if it is not already listed.
-5. Commit and push the config and rules changes to `main`. The site will then load saved catalog changes from Firestore; otherwise it continues to use `public/services.json`.
+1. Create a Firebase project and register a web app. Copy its `apiKey`, `authDomain`, `projectId`, and `appId` into `public/firebase-config.js`.
+2. Enable **Authentication → Email/Password**. Create the admin account with a full email address and a strong password, verify that email, and copy the account's Firebase **UID** into `adminUid`. Do not use a short PIN as the website password.
+3. Create the default **Cloud Firestore** database.
+4. Replace `REPLACE_WITH_ADMIN_UID` in `firestore.rules` with the same admin UID, then publish these rules in **Firestore Database → Rules**.
+5. Add `tichangari5869-crypto.github.io` to **Authentication → Settings → Authorized domains** if it is not already listed.
+6. Commit and push the config and rules changes to `main`. The site will then load saved catalog changes from Firestore; otherwise it continues to use `public/services.json`.
 
-The Firebase web config is public by design. Firestore security rules restrict writes to the verified admin account; do not make the catalog write rules public.
+The Firebase web config and admin UID are public by design. Firestore security rules restrict writes to the signed-in admin UID; do not make the catalog write rules public. The Admin panel can change the login only after the current email and password are re-entered. Email changes take effect after the verification link is confirmed.
 
 To help Google discover the website, add its URL as a URL-prefix property in [Google Search Console](https://search.google.com/search-console/) and submit:
 

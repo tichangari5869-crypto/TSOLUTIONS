@@ -119,6 +119,9 @@
     .admin-grid input, .admin-grid select, .admin-grid textarea { width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--card); color: var(--ink); }
     .admin-grid input[type="checkbox"] { width: auto; }
     .admin-grid .wide { grid-column: 1 / -1; }
+    .admin-section { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .admin-section h3 { margin: 0; }
+    .admin-hint { margin: 4px 0 10px; color: var(--muted); font-size: .88rem; }
     .admin-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .admin-actions button { min-height: 42px; padding: 9px 14px; border: 0; border-radius: 9px; background: var(--navy); color: #fff; font-weight: 700; }
     .admin-actions .save { background: var(--green); }
@@ -151,7 +154,7 @@
     .line-item input { width: 72px; padding: 7px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); }
     .total { display: flex; justify-content: space-between; gap: 10px; padding: 13px 0; font-size: 1.15rem; font-weight: 900; }
     label { display: block; margin: 11px 0 4px; font-weight: 650; }
-    .panel input[type="text"], .panel input[type="tel"] { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--card); color: var(--ink); }
+    .panel input[type="text"], .panel input[type="tel"], .panel input[type="email"], .panel input[type="password"] { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--card); color: var(--ink); }
     .note { color: var(--muted); font-size: .88rem; }
     .error { min-height: 1.4em; color: #b42318; }
     .send { width: 100%; margin-top: 8px; background: #16834a; color: #fff; }
@@ -165,10 +168,10 @@
 <body>
   <header class="hero">
     <div class="wrap">
-      <p class="brand">T Solutions Kenya</p>
-      <h1>Prices, time and what to bring</h1>
-      <p class="lead">Find the service you need, see what to bring, and send your request directly to us on WhatsApp. We confirm the final price before starting.</p>
-      <ul class="pills" aria-label="Service information">
+      <p id="brand" class="brand">T Solutions Kenya</p>
+      <h1 id="page-title">Prices, time and what to bring</h1>
+      <p id="page-intro" class="lead">Find the service you need, see what to bring, and send your request directly to us on WhatsApp. We confirm the final price before starting.</p>
+      <ul id="feature-pills" class="pills" aria-label="Service information">
         <li>Clear service prices</li>
         <li>Pay after service</li>
         <li>WhatsApp support</li>
@@ -183,8 +186,8 @@
       <p class="empty">Loading services…</p>
     </div>
     <section class="how">
-      <h2>How it works</h2>
-      <ol>
+      <h2 id="how-title">How it works</h2>
+      <ol id="how-steps">
         <li>Choose a service and check the documents or details to bring.</li>
         <li>Add services to your slip and send your request on WhatsApp.</li>
         <li>We confirm the price and complete your request.</li>
@@ -193,7 +196,7 @@
     </section>
   </main>
   <footer class="footer wrap">
-    <p>Questions? <a href="https://wa.me/254117784005" target="_blank" rel="noopener">Chat with T Solutions on WhatsApp</a>.</p>
+    <p><span id="footer-copy">Questions?</span> <a id="footer-whatsapp" href="https://wa.me/254117784005" target="_blank" rel="noopener">Chat with T Solutions on WhatsApp</a>.</p>
     <button id="admin-open" type="button">Admin login</button>
   </footer>
   <button id="slipbar" class="slipbar" type="button" hidden></button>
@@ -202,12 +205,47 @@
     <div class="panel">
       <button id="admin-close" class="close" type="button" aria-label="Close admin login">×</button>
       <h2 id="admin-title">T Solutions admin</h2>
-      <p id="admin-status" class="error" role="status">Sign in with the authorized Google account to manage services.</p>
-      <button id="admin-sign-in" class="send" type="button">Sign in with Google</button>
+      <p id="admin-status" class="error" role="status">Sign in with the authorized admin account to manage the website.</p>
+      <div id="admin-login-form">
+        <label for="admin-login-email">Admin email</label>
+        <input id="admin-login-email" type="email" autocomplete="username">
+        <label for="admin-login-password">Password</label>
+        <input id="admin-login-password" type="password" autocomplete="current-password">
+        <button id="admin-sign-in" class="send" type="button">Sign in</button>
+      </div>
       <section id="admin-editor" class="admin-editor" hidden>
+        <p class="admin-hint">Changes stay in this draft until you publish them. Published text and services appear on the public site.</p>
+        <div class="admin-section">
+          <h3>Website content</h3>
+          <div class="admin-grid">
+            <label class="wide">Business name<input id="admin-brand" type="text"></label>
+            <label class="wide">Page headline<input id="admin-headline" type="text"></label>
+            <label class="wide">Introduction<textarea id="admin-intro" rows="3"></textarea></label>
+            <label class="wide">Search description<textarea id="admin-description" rows="2"></textarea></label>
+            <label class="wide">WhatsApp number (254…)<input id="admin-whatsapp" type="tel"></label>
+            <label class="wide">Search box hint<input id="admin-search-placeholder" type="text"></label>
+            <label class="wide">Feature labels (one per line)<textarea id="admin-pills" rows="3"></textarea></label>
+            <label>How it works heading<input id="admin-how-title" type="text"></label>
+            <label class="wide">How it works steps (one per line)<textarea id="admin-steps" rows="4"></textarea></label>
+            <label class="wide">Popular search shortcuts (one per line)<textarea id="admin-searches" rows="4"></textarea></label>
+            <label class="wide">Footer text<input id="admin-footer-copy" type="text"></label>
+          </div>
+        </div>
+        <div class="admin-section">
+          <h3>Categories and services</h3>
+          <div class="admin-grid">
+            <label>Category<select id="admin-category"></select></label>
+            <label>Service<select id="admin-service"></select></label>
+            <label class="wide">Category name<input id="admin-category-name" type="text"></label>
+          </div>
+          <div class="admin-actions">
+            <button id="admin-add-category" type="button">Add category</button>
+            <button id="admin-delete-category" class="delete" type="button">Remove category</button>
+          </div>
+        </div>
+        <div class="admin-section">
+          <h3>Selected service</h3>
         <div class="admin-grid">
-          <label>Category<select id="admin-category"></select></label>
-          <label>Service<select id="admin-service"></select></label>
           <label class="wide">Service name<input id="admin-name" type="text"></label>
           <label>Price, low (KSh)<input id="admin-low" type="number" min="0"></label>
           <label>Price, high (KSh)<input id="admin-high" type="number" min="0"></label>
@@ -218,10 +256,24 @@
           <label class="wide"><input id="admin-per-page" type="checkbox"> Price is per page</label>
         </div>
         <div class="admin-actions">
-          <button id="admin-save" class="save" type="button">Save service</button>
+          <button id="admin-publish" class="save" type="button">Publish changes</button>
           <button id="admin-add" type="button">Add service</button>
-          <button id="admin-delete" class="delete" type="button">Delete service</button>
+          <button id="admin-delete" class="delete" type="button">Remove service</button>
           <button id="admin-sign-out" type="button">Sign out</button>
+        </div>
+        </div>
+      </section>
+      <section id="admin-account" class="admin-editor" hidden>
+        <h3>Change admin login</h3>
+        <p class="admin-hint">Enter your current email and password to confirm the change. Use a strong new password.</p>
+        <div class="admin-grid">
+          <label class="wide">Current email<input id="admin-current-email" type="email" autocomplete="username"></label>
+          <label class="wide">Current password<input id="admin-current-password" type="password" autocomplete="current-password"></label>
+          <label class="wide">New email<input id="admin-new-email" type="email" autocomplete="email"></label>
+          <label class="wide">New password (at least 12 characters)<input id="admin-new-password" type="password" autocomplete="new-password"></label>
+        </div>
+        <div class="admin-actions">
+          <button id="admin-change-login" type="button">Confirm and change login</button>
         </div>
       </section>
     </div>
@@ -229,9 +281,27 @@
   <script>
     "use strict";
 
-    const WHATSAPP_NUMBER = "254117784005";
+    const DEFAULT_SETTINGS = {
+      brand: "T Solutions Kenya",
+      headline: "Prices, time and what to bring",
+      intro: "Find the service you need, see what to bring, and send your request directly to us on WhatsApp. We confirm the final price before starting.",
+      description: "Find T Solutions Kenya service prices, turnaround times and what to bring. Request KRA, HELB, software, document and tech services through WhatsApp.",
+      whatsapp: "254117784005",
+      searchPlaceholder: "Search KRA, HELB, CV, Windows…",
+      pills: ["Clear service prices", "Pay after service", "WhatsApp support"],
+      howTitle: "How it works",
+      steps: [
+        "Choose a service and check the documents or details to bring.",
+        "Add services to your slip and send your request on WhatsApp.",
+        "We confirm the price and complete your request.",
+        "Pay after your work has been delivered."
+      ],
+      searches: ["KRA PIN", "HELB", "CV", "Windows", "Printing", "Business name"],
+      footerCopy: "Questions?"
+    };
     const CATEGORY_ICONS = ["🏛️", "💻", "📄", "✨"];
-    const popularSearches = ["KRA PIN", "HELB", "CV", "Windows", "Printing", "Business name"];
+    let siteSettings = { ...DEFAULT_SETTINGS };
+    let popularSearches = [...siteSettings.searches];
     const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
       "&": "&amp;",
       "<": "&lt;",
@@ -246,10 +316,56 @@
     const sheet = document.querySelector("#sheet");
     const selected = new Map();
     let categories = [];
+    window.tSolutionsSettings = siteSettings;
+    function renderSiteSettings() {
+      document.querySelector("#brand").textContent = siteSettings.brand;
+      document.querySelector("#page-title").textContent = siteSettings.headline;
+      document.querySelector("#page-intro").textContent = siteSettings.intro;
+      document.querySelector("#search").placeholder = siteSettings.searchPlaceholder;
+      document.querySelector("#feature-pills").replaceChildren(...siteSettings.pills.map((value) => {
+        const li = document.createElement("li");
+        li.textContent = value;
+        return li;
+      }));
+      document.querySelector("#how-title").textContent = siteSettings.howTitle;
+      document.querySelector("#how-steps").replaceChildren(...siteSettings.steps.map((value) => {
+        const li = document.createElement("li");
+        li.textContent = value;
+        return li;
+      }));
+      document.querySelector("#footer-copy").textContent = siteSettings.footerCopy;
+      const footerLink = document.querySelector("#footer-whatsapp");
+      footerLink.href = `https://wa.me/${encodeURIComponent(siteSettings.whatsapp)}`;
+      document.querySelector('meta[name="description"]').content = siteSettings.description;
+      document.title = `${siteSettings.brand} | ${siteSettings.headline}`;
+      document.querySelector('meta[property="og:title"]').content = document.title;
+      document.querySelector('meta[property="og:description"]').content = siteSettings.description;
+      popularSearches = [...siteSettings.searches];
+      document.querySelector("#chips").replaceChildren(...popularSearches.map((term) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.dataset.search = term;
+        button.textContent = term;
+        return button;
+      }));
+      const structuredData = document.querySelector('script[type="application/ld+json"]');
+      const organization = JSON.parse(structuredData.textContent);
+      organization.name = siteSettings.brand;
+      organization.description = siteSettings.description;
+      organization.telephone = `+${siteSettings.whatsapp}`;
+      organization.contactPoint.telephone = `+${siteSettings.whatsapp}`;
+      structuredData.textContent = JSON.stringify(organization);
+      window.tSolutionsSettings = siteSettings;
+    }
     window.addEventListener("service-catalog-loaded", (event) => {
       if (!Array.isArray(event.detail)) return;
       categories = event.detail;
       renderServices();
+    });
+    window.addEventListener("site-settings-loaded", (event) => {
+      if (!event.detail || typeof event.detail !== "object") return;
+      siteSettings = { ...DEFAULT_SETTINGS, ...event.detail };
+      renderSiteSettings();
     });
 
     function itemFor(key) {
@@ -337,7 +453,7 @@
       message += "\nPlease confirm the final price and what happens next.";
 
       const link = document.createElement("a");
-      link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      link.href = `https://wa.me/${siteSettings.whatsapp}?text=${encodeURIComponent(message)}`;
       link.target = "_blank";
       link.rel = "noopener";
       link.click();
@@ -346,7 +462,7 @@
     }
 
     document.querySelector("#search").addEventListener("input", renderServices);
-    document.querySelector("#chips").innerHTML = popularSearches.map((term) => `<button type="button" data-search="${escapeHtml(term)}">${escapeHtml(term)}</button>`).join("");
+    renderSiteSettings();
     document.querySelector("#chips").addEventListener("click", (event) => {
       const button = event.target.closest("[data-search]");
       if (!button) return;
@@ -396,7 +512,7 @@
       })
       .catch((error) => {
         console.error("Unable to load the service catalog.", error);
-        servicesElement.innerHTML = `<p class="empty">We couldn't load the service list. Please <a href="https://wa.me/${WHATSAPP_NUMBER}">contact us on WhatsApp</a>.</p>`;
+        servicesElement.innerHTML = `<p class="empty">We couldn't load the service list. Please <a href="https://wa.me/${siteSettings.whatsapp}">contact us on WhatsApp</a>.</p>`;
       });
   </script>
   <script type="module" src="firebase-admin.js"></script>
