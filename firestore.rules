@@ -5,14 +5,15 @@ service cloud.firestore {
     function isSiteAdmin() {
       return request.auth != null
         && request.auth.token.email_verified == true
-        && request.auth.token.email == "REPLACE_WITH_ADMIN_EMAIL";
+        && request.auth.uid == "REPLACE_WITH_ADMIN_UID";
     }
 
     match /site/catalog {
       allow read: if true;
       allow create, update: if isSiteAdmin()
-        && request.resource.data.keys().hasOnly(["categories"])
-        && request.resource.data.categories is list;
+        && request.resource.data.keys().hasOnly(["categories", "settings"])
+        && request.resource.data.categories is list
+        && request.resource.data.settings is map;
       allow delete: if false;
     }
   }
