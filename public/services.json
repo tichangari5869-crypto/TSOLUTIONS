@@ -1,0 +1,759 @@
+[
+    {
+        "n":  "Government \u0026 registration",
+        "items":  [
+                      {
+                          "n":  "KRA PIN registration",
+                          "lo":  150,
+                          "hi":  150,
+                          "per":  0,
+                          "t":  "15–60 minutes",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID (original or clear photo)",
+                                    "Phone number registered to your ID",
+                                    "Active email address"
+                                ],
+                          "ask":  [
+                                      "ID number"
+                                  ]
+                      },
+                      {
+                          "n":  "KRA return filing (simple)",
+                          "lo":  150,
+                          "hi":  150,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "KRA PIN",
+                                    "Phone or email linked to your KRA account",
+                                    "P9 form or your income details",
+                                    "Last year\u0027s return, if you have one"
+                                ],
+                          "ask":  [
+                                      "KRA PIN"
+                                  ]
+                      },
+                      {
+                          "n":  "KRA compliance help",
+                          "lo":  350,
+                          "hi":  350,
+                          "per":  0,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "KRA PIN",
+                                    "Phone or email linked to your KRA account",
+                                    "Details of what needs fixing"
+                                ],
+                          "ask":  [
+                                      "KRA PIN"
+                                  ]
+                      },
+                      {
+                          "n":  "HELB application",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "About 1 hour",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID or birth certificate",
+                                    "KCSE index number",
+                                    "Admission letter or student ID",
+                                    "Phone number registered to your ID",
+                                    "Parent or guardian ID details"
+                                ],
+                          "ask":  [
+                                      "ID number",
+                                      "KCSE index number",
+                                      "Student reg. number"
+                                  ]
+                      },
+                      {
+                          "n":  "HELB renewal",
+                          "lo":  150,
+                          "hi":  150,
+                          "per":  0,
+                          "t":  "15–60 minutes",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "Your HELB account details",
+                                    "Student ID or admission letter",
+                                    "Phone number registered to your ID"
+                                ],
+                          "ask":  [
+                                      "ID number",
+                                      "Student reg. number"
+                                  ]
+                      },
+                      {
+                          "n":  "NTSA services",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "15–60 minutes",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID (original or clear photo)",
+                                    "KRA PIN",
+                                    "Your NTSA account details, if you have one",
+                                    "Vehicle logbook details (for vehicle services)"
+                                ],
+                          "ask":  [
+                                      "ID number",
+                                      "KRA PIN"
+                                  ]
+                      },
+                      {
+                          "n":  "eCitizen payments",
+                          "lo":  75,
+                          "hi":  75,
+                          "per":  0,
+                          "t":  "10–20 minutes",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "eCitizen account or ID number",
+                                    "Phone number registered to your ID",
+                                    "Invoice or payment details"
+                                ],
+                          "ask":  [
+                                      "ID number"
+                                  ]
+                      },
+                      {
+                          "n":  "eCitizen application",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "15–60 minutes",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID (original or clear photo)",
+                                    "Phone number registered to your ID",
+                                    "Active email address"
+                                ],
+                          "ask":  [
+                                      "ID number"
+                                  ]
+                      },
+                      {
+                          "n":  "Business name registration (BRS)",
+                          "lo":  400,
+                          "hi":  400,
+                          "per":  0,
+                          "t":  "1–3 working days",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID of each owner",
+                                    "KRA PIN of each owner",
+                                    "2 or 3 business name options",
+                                    "What the business does and where",
+                                    "Owner\u0027s phone and email"
+                                ],
+                          "ask":  [
+                                      "ID number",
+                                      "KRA PIN"
+                                  ]
+                      },
+                      {
+                          "n":  "Company registration",
+                          "lo":  750,
+                          "hi":  750,
+                          "per":  0,
+                          "t":  "3–7 working days",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID and KRA PIN of every director",
+                                    "2 or 3 company name options",
+                                    "Postal and physical address",
+                                    "Share split and director contacts"
+                                ],
+                          "ask":  [
+                                      "ID number",
+                                      "KRA PIN"
+                                  ]
+                      },
+                      {
+                          "n":  "Document scanning",
+                          "lo":  20,
+                          "hi":  20,
+                          "per":  1,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "The documents you want scanned"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Online applications",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "15–60 minutes",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID (original or clear photo)",
+                                    "Phone number registered to your ID",
+                                    "The documents the application asks for"
+                                ],
+                          "ask":  [
+                                      "ID number"
+                                  ]
+                      },
+                      {
+                          "n":  "Immigration services",
+                          "lo":  350,
+                          "hi":  350,
+                          "per":  0,
+                          "t":  "1–3 days to submit",
+                          "d":  "Soft copy on WhatsApp or email. Printed copy can be delivered.",
+                          "b":  [
+                                    "National ID",
+                                    "Birth certificate",
+                                    "Passport photos",
+                                    "Parents\u0027 ID details (first-time applicants)"
+                                ],
+                          "ask":  [
+                                      "ID number",
+                                      "Birth certificate number"
+                                  ]
+                      }
+                  ]
+    },
+    {
+        "n":  "Software \u0026 setup",
+        "items":  [
+                      {
+                          "n":  "Microsoft Office install \u0026 setup",
+                          "lo":  400,
+                          "hi":  400,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Office activation / account setup",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "15–30 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop",
+                                    "Your Microsoft account details, or we help create one",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Windows installation",
+                          "lo":  650,
+                          "hi":  650,
+                          "per":  0,
+                          "t":  "1–2 hours",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Back up your files first, or ask us to"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Windows + drivers",
+                          "lo":  750,
+                          "hi":  750,
+                          "per":  0,
+                          "t":  "1–2 hours",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Driver installation",
+                          "lo":  300,
+                          "hi":  300,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "PC optimisation",
+                          "lo":  500,
+                          "hi":  500,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Antivirus install / setup",
+                          "lo":  300,
+                          "hi":  300,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Data backup",
+                          "lo":  500,
+                          "hi":  500,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "A flash disk or external drive, or ask us for one"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Basic data recovery",
+                          "lo":  1000,
+                          "hi":  1000,
+                          "per":  0,
+                          "t":  "1–3 days, depends on the damage",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "The device or drive with the lost files",
+                                    "What you are trying to recover"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "AutoCAD install / setup",
+                          "lo":  750,
+                          "hi":  750,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Revit install / setup",
+                          "lo":  750,
+                          "hi":  750,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "BIM software setup",
+                          "lo":  750,
+                          "hi":  750,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Primavera P6 setup",
+                          "lo":  750,
+                          "hi":  750,
+                          "per":  0,
+                          "t":  "30–90 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your laptop or PC and charger",
+                                    "Licence or account details, if you have them",
+                                    "Software licences are paid by you"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      }
+                  ]
+    },
+    {
+        "n":  "Documents \u0026 office",
+        "items":  [
+                      {
+                          "n":  "CV typing / design",
+                          "lo":  350,
+                          "hi":  350,
+                          "per":  0,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your details, education and work history",
+                                    "Your old CV, if you have one"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "PDF to Word / Excel",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your document, notes or clear photos of them"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Word document formatting",
+                          "lo":  300,
+                          "hi":  300,
+                          "per":  0,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your document, notes or clear photos of them"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Excel data entry",
+                          "lo":  350,
+                          "hi":  350,
+                          "per":  0,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your document, notes or clear photos of them"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Excel spreadsheet creation",
+                          "lo":  900,
+                          "hi":  900,
+                          "per":  0,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your document, notes or clear photos of them"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "PowerPoint presentation",
+                          "lo":  650,
+                          "hi":  650,
+                          "per":  0,
+                          "t":  "Same day to 2 days",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Topic and your notes",
+                                    "The look you prefer (optional)"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Typing service",
+                          "lo":  75,
+                          "hi":  75,
+                          "per":  1,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your document, notes or clear photos of them"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Printing black \u0026 white",
+                          "lo":  15,
+                          "hi":  15,
+                          "per":  1,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your file, or the papers to print"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Printing colour",
+                          "lo":  35,
+                          "hi":  35,
+                          "per":  1,
+                          "t":  "Same day",
+                          "d":  "Soft copy on WhatsApp or email. Printouts: collect or delivery.",
+                          "b":  [
+                                    "Your file, or the papers to print"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      }
+                  ]
+    },
+    {
+        "n":  "Tech \u0026 digital",
+        "items":  [
+                      {
+                          "n":  "Laptop / PC cleaning",
+                          "lo":  450,
+                          "hi":  450,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "Account details you already have"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Software installation (any)",
+                          "lo":  350,
+                          "hi":  350,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "Account details you already have"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Internet / Wi-Fi setup",
+                          "lo":  300,
+                          "hi":  300,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "Account details you already have"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Email setup",
+                          "lo":  150,
+                          "hi":  150,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your phone or laptop",
+                                    "A phone number for verification"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Data transfer",
+                          "lo":  350,
+                          "hi":  350,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "Account details you already have"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Flash disk / external drive setup",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "Account details you already have"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Social media account setup",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "A phone number",
+                                    "An email address",
+                                    "The username you prefer"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Basic website (one page)",
+                          "lo":  1000,
+                          "hi":  1000,
+                          "per":  0,
+                          "t":  "2–5 days",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Business name and what you offer",
+                                    "Contact details",
+                                    "Logo and photos, if you have them"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Website updates (monthly)",
+                          "lo":  550,
+                          "hi":  550,
+                          "per":  0,
+                          "t":  "1–2 days",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "Account details you already have"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Photo editing (basic)",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your device",
+                                    "Account details you already have"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Corporate email setup",
+                          "lo":  500,
+                          "hi":  500,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Your business domain name",
+                                    "Names of the people who need emails"
+                                ],
+                          "ask":  [
+
+                                  ]
+                      },
+                      {
+                          "n":  "Student portal help",
+                          "lo":  200,
+                          "hi":  200,
+                          "per":  0,
+                          "t":  "30–60 minutes",
+                          "d":  "We come to you, or you bring the device to us.",
+                          "b":  [
+                                    "Student reg. number",
+                                    "Your phone number",
+                                    "ID or admission letter"
+                                ],
+                          "ask":  [
+                                      "Student reg. number"
+                                  ]
+                      }
+                  ]
+    }
+]
